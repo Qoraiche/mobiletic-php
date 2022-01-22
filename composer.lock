@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "c0967e099c3c57fe0e9bb3f36a853292",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5171,6 +5171,120 @@
             "time": "2021-12-08T09:12:39+00:00"
         },
         {
+            "name": "touhidurabir/laravel-model-repository",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/touhidurabir/laravel-model-repository.git",
+                "reference": "bd770e8e44467bc90dc3fcc0ec81a8ea5c6bf871"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/touhidurabir/laravel-model-repository/zipball/bd770e8e44467bc90dc3fcc0ec81a8ea5c6bf871",
+                "reference": "bd770e8e44467bc90dc3fcc0ec81a8ea5c6bf871",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0",
+                "touhidurabir/laravel-stub-generator": "^1.0"
+            },
+            "require-dev": {
+                "illuminate/container": "^8.54",
+                "illuminate/database": "^8.54",
+                "illuminate/support": "^8.54",
+                "orchestra/testbench": "^6.20",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Touhidurabir\\ModelRepository\\ModelRepositoryServiceProvider"
+                    ],
+                    "aliases": {
+                        "ModelRepository": "Touhidurabir\\ModelRepository\\Facades\\ModelRepository"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Touhidurabir\\ModelRepository\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Touhidur Rahman",
+                    "email": "abircse06@gmail.com"
+                }
+            ],
+            "description": "A package to implement repository pattern for laravel models",
+            "support": {
+                "issues": "https://github.com/touhidurabir/laravel-model-repository/issues",
+                "source": "https://github.com/touhidurabir/laravel-model-repository/tree/1.1.3"
+            },
+            "time": "2021-10-27T06:48:20+00:00"
+        },
+        {
+            "name": "touhidurabir/laravel-stub-generator",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/touhidurabir/laravel-stub-generator.git",
+                "reference": "7986e73cbd3bb193f66367c319cf5ec7cd96584b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/touhidurabir/laravel-stub-generator/zipball/7986e73cbd3bb193f66367c319cf5ec7cd96584b",
+                "reference": "7986e73cbd3bb193f66367c319cf5ec7cd96584b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.57",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "illuminate/container": "^8.57",
+                "orchestra/testbench": "^6.20",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Touhidurabir\\StubGenerator\\StubGeneratorServiceProvider"
+                    ],
+                    "aliases": {
+                        "ModelRepository": "Touhidurabir\\StubGenerator\\Facades\\StubGenerator"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Touhidurabir\\StubGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Touhidur Rahman",
+                    "email": "abircse06@gmail.com"
+                }
+            ],
+            "description": "A laravel package to generate class files from stub files.",
+            "support": {
+                "issues": "https://github.com/touhidurabir/laravel-stub-generator/issues",
+                "source": "https://github.com/touhidurabir/laravel-stub-generator/tree/1.0.3"
+            },
+            "time": "2021-12-16T19:33:28+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.4.1",
             "source": {
@@ -7896,5 +8010,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
