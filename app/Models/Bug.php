@@ -16,11 +16,6 @@ class Bug extends Model
     const RESOLVED_STATUS = [80, 90];
 
     /**
-     * @var string[]
-     */
-    protected $with = ['category'];
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function project()

@@ -16,7 +16,7 @@ class Project extends Model
     protected $table = 'mantis_project_table';
 
     /** @var string[] */
-    //protected $with = ['bugs'];
+    protected $with = ['bugs'];
 
     /**
      * @return void
