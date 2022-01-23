@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Scopes\BugStatusScope;
+use App\Scopes\ImprovementStatusScope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,6 +17,15 @@ class Project extends Model
 
     /** @var string[] */
     //protected $with = ['bugs'];
+
+    /**
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::addGlobalScope(new BugStatusScope);
+        static::addGlobalScope(new ImprovementStatusScope);
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -39,18 +50,5 @@ class Project extends Model
     public function scopeOrderByAnomaliesCount(Builder $query): Builder
     {
         return $query->withCount('bugs')->orderBy('bugs_count', 'desc');
-    }
-
-    /**
-     * @param Builder $query
-     * @param $status
-     * @return Builder
-     */
-    public function scopeBugStatus(Builder $query, $status)
-    {
-        return $query->withCount(['bugs' => function(Builder $query) {
-            $query->where('status', 80);
-        }]);
-        //return $query->withCount('bugs')->has('', '', '', '', '');
     }
 }

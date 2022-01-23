@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Project;
 use App\Repositories\ProjectRepository;
 
 class ProjectService
@@ -21,8 +22,12 @@ class ProjectService
         $this->projectRepository = $projectRepository;
     }
 
-    public function getProjectsList()
+    /**
+     * @return mixed
+     */
+    public function getProjectsOrderByTotalAnomalies()
     {
-
+        // Project::orderByTotalBugs();
+        return Project::orderByAnomaliesCount()->get();
     }
 }
