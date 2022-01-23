@@ -48,9 +48,7 @@ class Project extends Model
      */
     public function scopeBugStatus(Builder $query, $status)
     {
-        return $query->whereHas('bugs', function (Builder $builder){
-            $builder->where('status', 80);
-        })->withCount(['bugs' => function(Builder $query) {
+        return $query->withCount(['bugs' => function(Builder $query) {
             $query->where('status', 80);
         }]);
         //return $query->withCount('bugs')->has('', '', '', '', '');
